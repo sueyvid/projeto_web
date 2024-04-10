@@ -1,0 +1,13 @@
+{
+  "profile": {
+    "name": "typicode"
+  },
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "produto A",
+      "quantidade": 100,
+      "preco": 49.99
+    }
+  ]
+}
