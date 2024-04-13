@@ -3,78 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página principal</title>
-    <style>
-        div { 
-            background-color: lightcoral;
-            width: 200px;
-            height: 200px;
-        }
-    </style>
+    <title>Home</title>
+    <link rel="stylesheet" href="global.css">
 </head>
 <body>
-    <h1>Página principal</h1>
-    <button>Página do administrador</button>
-    <button>Página do cliente</button>
-    <div id="main"></div>
-
-    <script>
-        
-        function apagar(id) {
-            // console.log(id)
-            fetch("http://localhost:3000/produtos/" + id, {
-                "method": "DELETE"
-            })
-            .then(response => response.json())
-            .then(dados => console.log(dados))
-        }
-
-        fetch("http://localhost:3000/produtos")
-        .then(response => response.json())
-        .then(dados => {
-            var produtos = dados.map(produto => (
-                "<div>" +
-                "<a href='http://localhost:3000/produtos/" + produto.id + "'>" +
-                "<p>Nome: " + produto.nome + "</p>" +
-                "<p>Quantidade: " + produto.quantidade + "</p>" +
-                "<p>Produto: " + produto.preco + "</p>" +
-                "</a>" +
-                "<button onclick=apagar(" + produto.id + ")>Apagar</button>" +
-                "</div>"
-            )).join("")
-            document.getElementById("main").innerHTML = produtos
-            // console.log(produtos)
-        })
-        .catch(erro => console.log(erro))
-    </script>
-    <form id="form">
-        Nome: <input type="text" name="nome"><br>
-        Quantidade: <input type="text" name="quantidade"><br>
-        Preço: <input type="text" name="preco"><br>
-        <input type="submit" value="Enviar">
-    </form>
-    <script>
-        function adicionar(e) {
-            e.preventDefault()
-            // console.log("Enviando dados...")
-            const data = new FormData(e.target)
-
-            const nome = data.get("nome");
-            const quantidade = data.get("quantidade");
-            const preco = data.get("preco");
-
-            console.log("Enviando dados: " + nome + " " + quantidade + " " + preco)
-
-            fetch('http://localhost:3000/produtos', {
-                method: 'POST',
-                body: JSON.stringify({
-                    nome: 'nome',
-                    quantidade: 'quantidade',
-                    preco: 'preco'
-                })
-            })
-        }
-        document.getElementById("form").addEventListener("submit", adicionar)
-    </script>
+    <div class="centro">
+        <h1>Loja Online</h1>
+        <div class="botoes">
+            <a href="./admin.html" class="botao">Página do administrador</a>
+            <a href="./client.html" class="botao">Página do cliente</a>
+        </div>
+    </div>
 </body>
 </html>

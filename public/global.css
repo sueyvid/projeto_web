@@ -1,0 +1,70 @@
+body {
+    margin: auto;
+    width: 70vw;
+}
+
+h1 {
+    text-align: center;
+}
+
+#titulo {
+    background-color: lightgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+div.produto {
+    background-color: lightgreen;
+    min-width: 300px;
+    height: 230px;
+    text-align: center;
+    padding-top: 70px;
+    color: white;
+    text-decoration: none;
+}
+
+div#main {
+    background-color: #199319;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.centro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.botoes {
+    display: flex;
+    gap: 20px;
+}
+
+.botao {
+    background-color: #199319;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.link {
+    text-decoration: None;
+    color: black;
+}
